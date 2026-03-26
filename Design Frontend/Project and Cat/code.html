@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildTrack - Projects &amp; Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#192830",
+              "on-primary-fixed": "#0e1d25",
+              "surface-container-highest": "#d5e5ef",
+              "primary-fixed-dim": "#b9c9d3",
+              "inverse-on-surface": "#e3f3fd",
+              "inverse-primary": "#b9c9d3",
+              "primary-fixed": "#d5e5ef",
+              "tertiary-fixed-dim": "#95d4b3",
+              "outline-variant": "#c3c7ca",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#ffb77d",
+              "secondary-fixed": "#ffdcc3",
+              "secondary": "#904d00",
+              "surface-bright": "#f4faff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-surface": "#0e1d25",
+              "surface-container": "#e0f0fb",
+              "error": "#ba1a1a",
+              "surface": "#f4faff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#2f1500",
+              "on-tertiary-fixed": "#002114",
+              "surface-container-high": "#daebf5",
+              "surface-variant": "#d5e5ef",
+              "secondary-container": "#fd8b00",
+              "on-primary-fixed-variant": "#3a4951",
+              "surface-dim": "#ccdce7",
+              "surface-container-low": "#e7f6ff",
+              "on-error": "#ffffff",
+              "on-background": "#0e1d25",
+              "surface-tint": "#516169",
+              "on-primary-container": "#99a9b2",
+              "inverse-surface": "#23323a",
+              "on-secondary-fixed-variant": "#6e3900",
+              "on-tertiary-fixed-variant": "#0e5138",
+              "tertiary": "#002d1c",
+              "tertiary-container": "#00452e",
+              "on-surface-variant": "#43474a",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#2f3e46",
+              "background": "#f4faff",
+              "on-secondary-container": "#603100",
+              "on-tertiary-container": "#75b393",
+              "outline": "#73787b",
+              "tertiary-fixed": "#b1f0ce"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f4faff;
+      }
+      h1, h2, h3 {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-24 md:pb-0 pt-16">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-slate-800/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-2xl shadow-slate-950/20">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-white tracking-tighter">BuildTrack</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Dashboard</a>
+<a class="text-orange-500 border-b-2 border-orange-500 pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="#">Projects</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-300 hover:bg-slate-700/50 rounded-lg transition-all p-2 active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-300 hover:bg-slate-700/50 rounded-lg transition-all p-2 active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full border border-slate-700 object-cover" data-alt="close-up portrait of professional architect in black vest and crisp white shirt against blurred construction background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ4W236974ABn6hsABgENcUbGNvGJnjMz56IBoy-XhHMmyzR4KGEbrKwRdup0Qr0QfZkc9nX7l-69YTX8PYu__qIOSNEE8dvsMqzibwsLgMz8vx9lea79cdzHEIiaklRV--oRH__XGZBzGqGz6YN4LfoICuJtu2oxjLN0yTKzXWBegwJdhw36LDt_R51G11E2SFi6tNcWBkjXYCxleos7rjumo-g6ywfc3ZIQV4x61ihCb2YPfTZuMwWsKOpG09RZVL7_FcQaWpRE"/>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
+<!-- Section 1: Active Projects Grid -->
+<section>
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div class="space-y-2 max-w-2xl">
+<h1 class="text-4xl font-black tracking-tight text-primary">Active Projects</h1>
+<p class="text-on-surface-variant body-lg">Select a project to manage observations, site reports, and safety protocols.</p>
+</div>
+<button class="bg-primary text-on-primary font-bold px-8 py-4 rounded-lg flex items-center gap-2 hover:bg-primary-container transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    NEW PROJECT
+                </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project Card A -->
+<div class="group bg-surface-container-lowest rounded-xl p-1 transition-all hover:bg-primary">
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col justify-between h-full space-y-8 transition-transform group-hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Active</span>
+<span class="text-on-surface-variant font-mono text-sm">#PRJ-2401</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-2">Project A: Luxury Villa</h3>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Bukit Peninsula, Bali</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-3/4"></div>
+</div>
+<div class="flex justify-between items-center text-sm font-bold">
+<span class="text-on-surface-variant">75% COMPLETE</span>
+<span class="text-primary">128 TASKS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card B -->
+<div class="group bg-primary rounded-xl p-1 shadow-2xl shadow-slate-900/10">
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col justify-between h-full space-y-8">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Selected</span>
+<span class="text-on-surface-variant font-mono text-sm">#PRJ-2402</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-2">Project B: Office Renovation</h3>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Central District, Jakarta</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-1/3"></div>
+</div>
+<div class="flex justify-between items-center text-sm font-bold">
+<span class="text-on-surface-variant">32% COMPLETE</span>
+<span class="text-primary">45 TASKS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card C -->
+<div class="group bg-surface-container-lowest rounded-xl p-1 transition-all hover:bg-primary">
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col justify-between h-full space-y-8 transition-transform group-hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Pending</span>
+<span class="text-on-surface-variant font-mono text-sm">#PRJ-2405</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-2">Project C: High-Rise Hotel</h3>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Nusa Dua, Bali</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-surface-container-highest h-full w-0"></div>
+</div>
+<div class="flex justify-between items-center text-sm font-bold">
+<span class="text-on-surface-variant">0% COMPLETE</span>
+<span class="text-primary">210 TASKS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Category Selection (Appears when Project Selected) -->
+<section class="pt-8">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-10 w-2 bg-secondary rounded-full"></div>
+<h2 class="text-3xl font-black tracking-tight text-primary uppercase">Categories: Project B</h2>
+</div>
+<!-- Bento Grid Category Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Sipil -->
+<button class="group relative overflow-hidden bg-surface-container-low p-8 rounded-xl text-left transition-all hover:bg-primary active:scale-95 flex flex-col justify-between h-72">
+<div class="bg-surface-variant w-14 h-14 rounded-lg flex items-center justify-center group-hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors" data-icon="foundation">foundation</span>
+</div>
+<div>
+<h4 class="text-2xl font-black text-primary group-hover:text-white mb-2">Sipil</h4>
+<p class="text-on-surface-variant group-hover:text-slate-300 font-bold text-sm">12 TASKS REMAINING</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-primary group-hover:text-white" data-icon="foundation">foundation</span>
+</div>
+</button>
+<!-- Arsitektur -->
+<button class="group relative overflow-hidden bg-surface-container-low p-8 rounded-xl text-left transition-all hover:bg-primary active:scale-95 flex flex-col justify-between h-72">
+<div class="bg-surface-variant w-14 h-14 rounded-lg flex items-center justify-center group-hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h4 class="text-2xl font-black text-primary group-hover:text-white mb-2">Arsitektur</h4>
+<p class="text-on-surface-variant group-hover:text-slate-300 font-bold text-sm">8 TASKS REMAINING</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-primary group-hover:text-white" data-icon="architecture">architecture</span>
+</div>
+</button>
+<!-- MEP -->
+<button class="group relative overflow-hidden bg-surface-container-low p-8 rounded-xl text-left transition-all hover:bg-primary active:scale-95 flex flex-col justify-between h-72 border-2 border-secondary/20">
+<div class="bg-secondary w-14 h-14 rounded-lg flex items-center justify-center group-hover:bg-white/10 transition-colors shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-3xl text-white" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h4 class="text-2xl font-black text-primary group-hover:text-white mb-2">MEP</h4>
+<p class="text-secondary group-hover:text-secondary-fixed font-bold text-sm">24 TASKS REMAINING</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-primary group-hover:text-white" data-icon="bolt">bolt</span>
+</div>
+</button>
+<!-- Interior -->
+<button class="group relative overflow-hidden bg-surface-container-low p-8 rounded-xl text-left transition-all hover:bg-primary active:scale-95 flex flex-col justify-between h-72">
+<div class="bg-surface-variant w-14 h-14 rounded-lg flex items-center justify-center group-hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors" data-icon="chair">chair</span>
+</div>
+<div>
+<h4 class="text-2xl font-black text-primary group-hover:text-white mb-2">Interior</h4>
+<p class="text-on-surface-variant group-hover:text-slate-300 font-bold text-sm">ALL TASKS COMPLETE</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-primary group-hover:text-white" data-icon="chair">chair</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Stats Visualization (Editorial Style) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<div class="bg-primary p-12 rounded-xl text-white space-y-8 flex flex-col justify-center">
+<h2 class="text-5xl font-black tracking-tight leading-none">REAL-TIME<br/><span class="text-secondary-container">UTILITY</span></h2>
+<p class="text-slate-400 max-w-sm body-lg">Our blueprint-first approach ensures every observation is categorized with surgical precision, reducing inspection time by 40%.</p>
+<div class="flex gap-12 pt-4">
+<div>
+<div class="text-4xl font-bold">142</div>
+<div class="text-xs uppercase tracking-widest text-slate-500 font-bold mt-1">Pending Sync</div>
+</div>
+<div>
+<div class="text-4xl font-bold">08</div>
+<div class="text-xs uppercase tracking-widest text-slate-500 font-bold mt-1">Critical Issues</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden relative min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="high-angle architectural shot of a modern construction site with heavy machinery, orange safety cones, and concrete structure in morning fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD76rZlUUVZCLayG8-8jsPwi80h9-ov0yesEwkiXpVRHKoRfBrqoZrwWmDxI91h2FXQ0JtODJM6J1TVJKRKF8DHcH28_fnzwLqTN5Fhxx4bVNqFtGv7LxfBCgSx5KDZ4FYnSXaCfWIVSCqZ4oIeVKMuKziz9r6btuspDaGfo0gBdN2RqraoOXYAdwRGTVriiq7yFNVvnuPXgIGKvvw-jmhmlTwpccRz3x3mg6Hty4uFvEObm_Oz0INDO4gVRSQm3_tq50-l7GeOzk4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-12">
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20">
+<p class="text-white italic font-medium">"Precision in the field translates to perfection in the finish. Manage every detail through the BuildTrack shell."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-slate-900/90 dark:bg-black/90 backdrop-blur-lg border-t border-slate-700/30 shadow-[0_-10px_40px_rgba(0,0,0,0.4)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-slate-800 text-orange-500 rounded-xl px-5 py-2 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

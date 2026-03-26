@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#192830",
+              "on-primary-fixed": "#0e1d25",
+              "surface-container-highest": "#d5e5ef",
+              "primary-fixed-dim": "#b9c9d3",
+              "inverse-on-surface": "#e3f3fd",
+              "inverse-primary": "#b9c9d3",
+              "primary-fixed": "#d5e5ef",
+              "tertiary-fixed-dim": "#95d4b3",
+              "outline-variant": "#c3c7ca",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#ffb77d",
+              "secondary-fixed": "#ffdcc3",
+              "secondary": "#904d00",
+              "surface-bright": "#f4faff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-surface": "#0e1d25",
+              "surface-container": "#e0f0fb",
+              "error": "#ba1a1a",
+              "surface": "#f4faff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#2f1500",
+              "on-tertiary-fixed": "#002114",
+              "surface-container-high": "#daebf5",
+              "surface-variant": "#d5e5ef",
+              "secondary-container": "#fd8b00",
+              "on-primary-fixed-variant": "#3a4951",
+              "surface-dim": "#ccdce7",
+              "surface-container-low": "#e7f6ff",
+              "on-error": "#ffffff",
+              "on-background": "#0e1d25",
+              "surface-tint": "#516169",
+              "on-primary-container": "#99a9b2",
+              "inverse-surface": "#23323a",
+              "on-secondary-fixed-variant": "#6e3900",
+              "on-tertiary-fixed-variant": "#0e5138",
+              "tertiary": "#002d1c",
+              "tertiary-container": "#00452e",
+              "on-surface-variant": "#43474a",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#2f3e46",
+              "background": "#f4faff",
+              "on-secondary-container": "#603100",
+              "on-tertiary-container": "#75b393",
+              "outline": "#73787b",
+              "tertiary-fixed": "#b1f0ce"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-slate-800/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-2xl shadow-slate-950/20">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-white tracking-tighter">BuildTrack</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Dashboard</a>
+<a class="text-orange-500 border-b-2 border-orange-500 pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="#">Projects</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Reports</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-700/50 rounded-lg transition-all active:scale-95 text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-700/50 rounded-lg transition-all active:scale-95 text-white">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden">
+<img alt="User Profile" data-alt="professional male project manager headshot with confident expression in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnEuDUmenMM6ToE3NJX6sT1u2feChDnPEkelNyqlXao4Wsx3cOTnz9pECyYnNg5aYCGvXDfqBjmFeuGxRPAMd1AS5CIYBPYyUiBFLjclcc3LCkM24HzwZqVq2A0a9MY9JDJbEQkf4JPRYPUIQhpj6nj_j0EmgpbJzC47bFzLQzfPyy6Ygd2DCf0TPOl0Zn3a5yGlj9xqQjTo8l6i6iMrvvpxr4xkfk_Uk9nkqZyzsKzFcCm2De5HOOqNaiGu-4uHqJh_SPB2GLVfE"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-4 md:px-10 max-w-7xl mx-auto">
+<!-- Breadcrumb & Header Asymmetry -->
+<header class="mb-12">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2 font-label text-sm uppercase tracking-widest">
+<span>Project Alpha</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Structural Phase</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Review #8821</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-black tracking-tight text-primary leading-none">Sub-Floor Concrete Reinforcement</h1>
+<p class="mt-4 text-on-surface-variant max-w-2xl font-body text-lg">Detailed inspection review for Section A-4. Submitted by Senior Site Lead: <span class="text-primary font-bold">Marcus Thorne</span>.</p>
+</header>
+<!-- Status Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: Task & Visual Evidence (Bento Grid Style) -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Task Details Block -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_50px_rgba(14,29,37,0.08)]">
+<div class="flex justify-between items-start mb-6">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<span class="w-2 h-8 bg-secondary rounded-full"></span>
+                            Submission Details
+                        </h2>
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant font-label text-xs font-bold uppercase tracking-tighter rounded">Submitted</span>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider mb-1">Checklist Category</p>
+<p class="font-headline font-bold text-primary">SIPIL / Structural Steel</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider mb-1">Date Submitted</p>
+<p class="font-headline font-bold text-primary">Oct 24, 2023 • 14:45 PM</p>
+</div>
+</div>
+<div class="border-l-4 border-surface-variant pl-6">
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider mb-2">Worker Observation &amp; Comments</p>
+<p class="font-body text-on-surface leading-relaxed italic">
+                                "All rebar spacers placed according to Blueprint A-02. Tension cables verified for pre-stressing. Slight moisture present on southern quadrant but within tolerance levels for the pour. Ready for structural sign-off."
+                            </p>
+</div>
+</div>
+</section>
+<!-- Photographic Evidence Grid -->
+<section class="space-y-4">
+<h3 class="text-lg font-bold tracking-tight text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined">photo_library</span>
+                        Visual Evidence (4 Photos)
+                    </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group relative aspect-square rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Steel rebar" class="object-cover w-full h-full" data-alt="close-up of industrial steel rebar grid on a construction site with precise spacing and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJtxep44va2-HpQ3Amjnq1hvWwN-hTS7GVmYk_WylZpN7kCzPiQLnCtbIkzSVzqUTAvb2ejPoFVk-ShN2vLHdX7wBlp50qOblwa12PxvNu2-myH6XWnZKI7uVW1RuCb5INUCluOQ68w9kgf8MCPopYZ2PmBj9XDZzLHMdmFYS018mHtHJwmo0guAqLJQu-JNGNmhWuxs-LSUALwjO9bOsVjkSYWcvdgIJeJ1ZsGd3g7WeLdKdzixzFfedM3tUYrrhHIUasVjIedmE"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">zoom_in</span>
+</div>
+</div>
+<div class="group relative aspect-square rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Concrete base" class="object-cover w-full h-full" data-alt="wide shot of a large construction foundation being prepared for concrete pour with orange markers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmzfizkwgTTXEb2zrllKBLjpXN1zYszSJAgoTLccU0MEdN2zB__7vgMC-QZb7Sq7lZxVspKS8hPypvVv-tsxxuI8ARpvXdOt-T2BthbBGhHlafmaxbMZ0PGyE6CHdlOUGVwU9wDy9S4nMepcZM4Vn2PEKmxO95zp-AvQP1vymcgEekq9t8WVIxrgyKQzlXx-LaKobBqiXNpKEmZvWSa2-iIZmPBHpx_ycC0mIw-u2yIYsLDpms2EnMFOUK4_mHJHu_dB2zd9zsWs0"/>
+</div>
+<div class="group relative aspect-square rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Site Tools" class="object-cover w-full h-full" data-alt="professional construction site tools and blueprint roll on a wooden workbench with warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCreB4E6D0Yiq_gu5pBlkI_Kkw03ZVYaDUSyXI1sUTjepKQzYuAkKImNb30NBcmC3_9IM2TPfLyIdyRgVpwbGyoRcT9Jj8ulWL2AWcHn3Ren4dlxF0v8UHj704CRwKWfiCm7tHfNaS5ftUKJL60SNk6tc6I0EFhHByb-_tnfYEoI_QT4E_koSC81ouawzFTBMIwLLQCYDb847rLrAwbK1fKlgRzWWTzyzfbf99KlKxV-Kak5Fo5Nl0y_7U1npmAIfjjAjAYkwUSIcM"/>
+</div>
+<div class="group relative aspect-square rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Worker verify" class="object-cover w-full h-full" data-alt="focused worker in yellow safety vest inspecting structural measurements with a professional gauge tool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcmppsY6zPM9zy6B2QtiOFbq-nlyac9bDGDl2HkJv3Se4fnYUPK48CcNAn2ssYLAcXX7SYjThd4jRlYE7VrHj07Iz6X-VebcqZBNmaWzs94eb6hO_fE4g9u6GyalCTN0lHcExiRB9n2HXmmuYChRb-a1ZEHxvkSGbvQrbKJwEoyOx_2ur9Eqan8-kdHVbriY1qNpVxt5gB1gb_QwcGFFrNy7k1T7ms5TW7ihA-ZcoeCo7rWUGB70PC7r50COgACK4HJBi4j9awzUE"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Right: Decision Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="sticky top-24">
+<div class="bg-primary text-white p-8 rounded-xl shadow-2xl relative overflow-hidden">
+<!-- Decorative Industrial Gradient -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/30 to-transparent -mr-16 -mt-16 rounded-full blur-3xl"></div>
+<h2 class="text-2xl font-black mb-6 relative z-10">Manager Decision</h2>
+<div class="space-y-4 relative z-10">
+<!-- Approve Action -->
+<button class="w-full flex items-center justify-between bg-tertiary-fixed text-on-tertiary-fixed-variant px-6 py-5 rounded-lg font-headline font-black uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span>Approve Pour</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<div class="pt-4 border-t border-white/10">
+<p class="text-white/60 text-xs font-label uppercase tracking-widest mb-4">Request Adjustments</p>
+<label class="block mb-2 text-sm font-medium text-white/80">Rejection Reason (Mandatory)</label>
+<textarea class="w-full bg-primary-container text-white border-0 focus:ring-2 focus:ring-secondary rounded-lg p-4 text-sm font-body placeholder:text-on-primary-container" placeholder="Detail the specific corrections required..." rows="4"></textarea>
+<button class="w-full mt-4 flex items-center justify-between bg-error-container text-on-error-container px-6 py-4 rounded-lg font-headline font-black uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span>Reject / Revision</span>
+<span class="material-symbols-outlined">warning</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Task Compliance Summary -->
+<div class="mt-8 bg-surface-container-low p-6 rounded-xl border-l-4 border-secondary">
+<h4 class="font-headline font-bold text-primary mb-4">Compliance Status</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-green-600 text-sm">check</span>
+<span class="text-on-surface-variant">Rebar Type: Grade 60 (Verified)</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-green-600 text-sm">check</span>
+<span class="text-on-surface-variant">Grid Spacing: 150mm OC (Verified)</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-amber-500 text-sm">info</span>
+<span class="text-on-surface-variant">Southern Quad: High Moisture (Low Risk)</span>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-slate-900/90 dark:bg-black/90 backdrop-blur-lg border-t border-slate-700/30 shadow-[0_-10px_40px_rgba(0,0,0,0.4)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-slate-800 text-orange-500 rounded-xl px-5 py-2 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150 relative" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Alerts</span>
+<span class="absolute top-2 right-4 w-2 h-2 bg-orange-500 rounded-full"></span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

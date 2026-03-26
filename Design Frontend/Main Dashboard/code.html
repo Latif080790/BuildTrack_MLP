@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#192830",
+              "on-primary-fixed": "#0e1d25",
+              "surface-container-highest": "#d5e5ef",
+              "primary-fixed-dim": "#b9c9d3",
+              "inverse-on-surface": "#e3f3fd",
+              "inverse-primary": "#b9c9d3",
+              "primary-fixed": "#d5e5ef",
+              "tertiary-fixed-dim": "#95d4b3",
+              "outline-variant": "#c3c7ca",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#ffb77d",
+              "secondary-fixed": "#ffdcc3",
+              "secondary": "#904d00",
+              "surface-bright": "#f4faff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-surface": "#0e1d25",
+              "surface-container": "#e0f0fb",
+              "error": "#ba1a1a",
+              "surface": "#f4faff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#2f1500",
+              "on-tertiary-fixed": "#002114",
+              "surface-container-high": "#daebf5",
+              "surface-variant": "#d5e5ef",
+              "secondary-container": "#fd8b00",
+              "on-primary-fixed-variant": "#3a4951",
+              "surface-dim": "#ccdce7",
+              "surface-container-low": "#e7f6ff",
+              "on-error": "#ffffff",
+              "on-background": "#0e1d25",
+              "surface-tint": "#516169",
+              "on-primary-container": "#99a9b2",
+              "inverse-surface": "#23323a",
+              "on-secondary-fixed-variant": "#6e3900",
+              "on-tertiary-fixed-variant": "#0e5138",
+              "tertiary": "#002d1c",
+              "tertiary-container": "#00452e",
+              "on-surface-variant": "#43474a",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#2f3e46",
+              "background": "#f4faff",
+              "on-secondary-container": "#603100",
+              "on-tertiary-container": "#75b393",
+              "outline": "#73787b",
+              "tertiary-fixed": "#b1f0ce"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #c3c7ca 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-slate-800/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-2xl shadow-slate-950/20 bg-gradient-to-b from-slate-800 to-slate-900">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-white tracking-tighter font-['Space_Grotesk']">BuildTrack</span>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-orange-500 border-b-2 border-orange-500 pb-1" href="#">Dashboard</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-300 hover:text-white transition-colors" href="#">Projects</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-300 hover:text-white transition-colors" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-slate-700/50 rounded-lg px-3 py-1 text-slate-300">
+<span class="material-symbols-outlined text-sm mr-2">search</span>
+<span class="text-xs font-label">Search project specs...</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 hover:bg-slate-700/50 rounded-lg transition-all p-2 cursor-pointer active:scale-95 duration-200">notifications</span>
+<span class="material-symbols-outlined text-slate-300 hover:bg-slate-700/50 rounded-lg transition-all p-2 cursor-pointer active:scale-95 duration-200">settings</span>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full border border-slate-600 ml-2" data-alt="professional portrait of a construction project manager wearing a white hard hat with industrial site background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN0FUNOJekwRquB7VqO86d1RgdzjdB65rzlNhA1gmvS8-5m4pljhI4njJMESPXTzVpm-BCSYecBdf1ZB6kxRTYuDrm3o26GLgib8_xdvzNuYynt1jRhjddPgtRVrYv_IDQ21LZP9rLyRXM-f3xMJ1TH8iCg4h1vpg1T4SuofFYOpDflTpTITJZr1G8-YUZSrLP8cljrXSGOvA9Fy7Iq7k491MC12AVJt4ys4xmWgVxtrTX6U_rz4Vp-wEPaJC8KZoHFQ3sQoZisrU"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-10 max-w-[1440px] mx-auto min-h-screen relative">
+<!-- Blueprint subtle overlay -->
+<div class="fixed inset-0 blueprint-grid pointer-events-none"></div>
+<!-- Dashboard Header -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
+<div class="space-y-1">
+<span class="text-secondary font-headline font-bold uppercase tracking-widest text-xs">Site Status: Active</span>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tighter text-primary">Skyline Tower Phase II</h1>
+<p class="text-on-surface-variant max-w-xl">Project overview and compliance monitoring for structural, architectural, and mechanical systems.</p>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary py-4 px-8 rounded-lg font-headline font-bold flex items-center gap-2 transition-all active:scale-95 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined">add_circle</span>
+                New Observation
+            </button>
+</div>
+<!-- Top Row: Progress Summary & Category Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12 relative z-10">
+<!-- Global Progress Card (Bento Large) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between border-l-8 border-primary">
+<div>
+<h3 class="font-headline font-bold text-lg text-primary-container">Overall Progress</h3>
+<div class="mt-8 flex items-baseline gap-2">
+<span class="text-7xl font-headline font-black text-primary">51</span>
+<span class="text-2xl font-headline font-bold text-on-surface-variant">%</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[51%]"></div>
+</div>
+<div class="flex justify-between text-xs font-label font-bold uppercase tracking-tighter text-on-surface-variant">
+<span>Foundation &amp; Slab</span>
+<span>Fit-out &amp; Finish</span>
+</div>
+</div>
+</div>
+<!-- Category Breakdown Grid (Bento Medium) -->
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Sipil -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between border-t-4 border-primary">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 bg-surface-variant rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">architecture</span>
+</div>
+<span class="font-headline font-bold text-xl text-primary">80%</span>
+</div>
+<div class="mt-6">
+<span class="block text-xs font-label font-bold uppercase text-on-surface-variant">Sipil</span>
+<div class="mt-2 w-full h-1.5 bg-white/50 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[80%]"></div>
+</div>
+</div>
+</div>
+<!-- Arsitektur -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between border-t-4 border-primary/60">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 bg-surface-variant rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">home_work</span>
+</div>
+<span class="font-headline font-bold text-xl text-primary">65%</span>
+</div>
+<div class="mt-6">
+<span class="block text-xs font-label font-bold uppercase text-on-surface-variant">Arsitektur</span>
+<div class="mt-2 w-full h-1.5 bg-white/50 rounded-full overflow-hidden">
+<div class="h-full bg-primary/60 w-[65%]"></div>
+</div>
+</div>
+</div>
+<!-- MEP -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between border-t-4 border-secondary">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 bg-surface-variant rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+</div>
+<span class="font-headline font-bold text-xl text-secondary">40%</span>
+</div>
+<div class="mt-6">
+<span class="block text-xs font-label font-bold uppercase text-on-surface-variant">MEP</span>
+<div class="mt-2 w-full h-1.5 bg-white/50 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[40%]"></div>
+</div>
+</div>
+</div>
+<!-- Interior -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between border-t-4 border-outline">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 bg-surface-variant rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">chair</span>
+</div>
+<span class="font-headline font-bold text-xl text-outline">20%</span>
+</div>
+<div class="mt-6">
+<span class="block text-xs font-label font-bold uppercase text-on-surface-variant">Interior</span>
+<div class="mt-2 w-full h-1.5 bg-white/50 rounded-full overflow-hidden">
+<div class="h-full bg-outline w-[20%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Split: Urgent Tasks & Recent Activity -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<!-- Left: Urgent Tasks (Editorial Style) -->
+<div class="lg:col-span-7">
+<div class="flex items-center justify-between mb-8 border-b-2 border-primary pb-4">
+<h2 class="font-headline font-black text-2xl tracking-tighter uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+                        Urgent Tasks
+                    </h2>
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">3 Actions Required</span>
+</div>
+<div class="space-y-6">
+<!-- Task Item 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl group transition-all hover:bg-white border border-transparent hover:border-outline-variant/30 shadow-sm flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-error-container flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-on-error-container">water_drop</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-primary text-lg">Foundation Leakage - Zone B4</h4>
+<p class="text-on-surface-variant text-sm mt-1">Groundwater seepage detected in elevator pit. Waterproofing integrity check required.</p>
+</div>
+<span class="text-xs font-label font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded uppercase">MEP</span>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="professional male avatar for on-site construction specialist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdfOPTmGoZROwtlGFFwOnJFzZO1b7DAc6qqGjrlOtzoyaG0-1muFginAv80ifTXVPtSt3xKcUVHqlCgN7DFRSLWBojhOVwAdusDt6RZl_SCsxBjHTeIQv8tQ4AKrFJNUUeJFEgadV0ST95fiqw3rheTMBL21M3yYBF0tdKHTsuUeaBaHcxUQm6Hf9zlsIVYaBFT4BP6N1TigYRgW2no68jxuKyGyor52MB_pNtKzH2hD3Pn5AeFmUY7B4YmTo1esFbH7kschpHQ9E"/>
+<img alt="avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="professional female avatar for quality control engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUPPly5Ndb3Vs4Eb0NEwDaO-H_Xq0rP_-N89OIfqKT3EvLkUN2TKxFaI0Gwc9XEoHjjLUODAN_PuGGNS_9VH1y33lDfSJkN1SNWW4dkYFOaHWFs28hE9efKukzgMB32jcsl1Ralr9zT3L4GIIRdc3Tj0VD4WDm3IkCclJoqWBa4AvU4QXbp4hvRGhzfcWleaycEqIvsDepcws83zC1Fai6j_JsriCneqNue6wH3tZvSaa1lCeMOSNYgx_qEqxA8eD99W-m28zx4kQ"/>
+</div>
+<button class="text-secondary font-bold text-sm uppercase tracking-widest flex items-center gap-1 hover:underline">
+                                    View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl group transition-all hover:bg-white border border-transparent hover:border-outline-variant/30 shadow-sm flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-lg text-secondary">
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-primary text-lg">Curtain Wall Alignment</h4>
+<p class="text-on-surface-variant text-sm mt-1">Deviation of 5mm detected on Level 12 east wing facade. Realignment before glass installation.</p>
+</div>
+<span class="text-xs font-label font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded uppercase">Arsitektur</span>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-error text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Due in 4 hours
+                                </span>
+<button class="text-secondary font-bold text-sm uppercase tracking-widest flex items-center gap-1 hover:underline">
+                                    View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Recent Activity Feed -->
+<div class="lg:col-span-5 bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary">
+<h2 class="font-headline font-black text-2xl tracking-tighter uppercase mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined">history</span>
+                    Recent Activity
+                </h2>
+<div class="space-y-8 relative">
+<!-- Timeline Line -->
+<div class="absolute left-4 top-2 bottom-2 w-0.5 bg-outline-variant/20"></div>
+<!-- Activity Item 1 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 bg-tertiary-fixed rounded-full flex items-center justify-center border-4 border-surface-container-low">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">14:32 • Sipil</span>
+<h5 class="font-bold text-primary">Column Reinforcement Approved</h5>
+<p class="text-sm text-on-surface-variant mt-1">Structural engineer signed off on Zone A reinforcement bar layout. Ready for casting.</p>
+<div class="mt-3 bg-surface-container-highest/50 p-2 rounded flex items-center gap-3">
+<div class="w-12 h-12 bg-primary rounded overflow-hidden">
+<img alt="Inspection photo" class="w-full h-full object-cover grayscale opacity-50" data-alt="close up industrial photograph of steel rebar mesh for concrete column reinforcement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDsAQ3erZuUjbW_EWpJ_gmB_ITROFLKBgaBIWkofjOzIXzOPyhDmH6x9U9d94FsFRs2FtV2CjVcAoXBOsZ7d_50TBPG8-celMuyATpytDmum8xVdgbtFEafkQpQ6Cg9p33yKCKmTs6THQ5jLQaxdCmFiwHe-DTpAMvCLLAJLmYC96mfUxINsaw4s-4ejBtIT2GaCEgnDPl_CpfaRFEHjkqih11P-dbXJcuAnIikh9ESRP7WEYhCKPJ4JBglBFx0vv5MSe2r4TF0Q8"/>
+</div>
+<span class="text-xs font-label italic text-on-surface-variant">inspection_photo_ZA_402.jpg</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 bg-primary-fixed rounded-full flex items-center justify-center border-4 border-surface-container-low">
+<span class="material-symbols-outlined text-on-primary-fixed-variant text-sm">assignment_turned_in</span>
+</div>
+<div>
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">11:05 • MEP</span>
+<h5 class="font-bold text-primary">HVAC Ducting Submission</h5>
+<p class="text-sm text-on-surface-variant mt-1">Main contractor submitted shop drawings for Level 5-8 ventilation layout.</p>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 bg-error-container rounded-full flex items-center justify-center border-4 border-surface-container-low">
+<span class="material-symbols-outlined text-on-error-container text-sm">report_problem</span>
+</div>
+<div>
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">09:15 • Safety</span>
+<h5 class="font-bold text-primary">Safety Violation Recorded</h5>
+<p class="text-sm text-on-surface-variant mt-1">Missing fall protection on north scaffolding. Corrective action issued to subcontractor.</p>
+<span class="mt-2 inline-block px-2 py-0.5 bg-error text-on-error text-[10px] font-bold uppercase rounded">Critical</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-12 py-3 border border-outline/30 rounded font-bold uppercase text-xs tracking-widest text-on-surface-variant hover:bg-surface-variant/40 transition-colors">
+                    View Full Audit Log
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Shared Component - Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-slate-900/90 dark:bg-black/90 backdrop-blur-lg border-t border-slate-700/30 shadow-[0_-10px_40px_rgba(0,0,0,0.4)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center bg-slate-800 text-orange-500 rounded-xl px-5 py-2 active:scale-90 duration-150">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Categories</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-4 w-2 h-2 bg-orange-500 rounded-full"></span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Alerts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-white transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider">Profile</span>
+</div>
+</footer>
+</body></html>

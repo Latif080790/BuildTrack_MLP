@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildTrack - Login</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#fd8b00",
+              "primary": "#192830",
+              "surface-variant": "#d5e5ef",
+              "on-tertiary-container": "#75b393",
+              "on-primary-container": "#99a9b2",
+              "surface-dim": "#ccdce7",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#ffb77d",
+              "primary-fixed-dim": "#b9c9d3",
+              "inverse-surface": "#23323a",
+              "secondary": "#904d00",
+              "on-primary-fixed": "#0e1d25",
+              "on-secondary": "#ffffff",
+              "on-background": "#0e1d25",
+              "primary-fixed": "#d5e5ef",
+              "primary-container": "#2f3e46",
+              "outline": "#73787b",
+              "surface-tint": "#516169",
+              "on-tertiary-fixed-variant": "#0e5138",
+              "surface-container": "#e0f0fb",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#43474a",
+              "tertiary": "#002d1c",
+              "on-secondary-container": "#603100",
+              "surface-container-high": "#daebf5",
+              "on-secondary-fixed-variant": "#6e3900",
+              "on-error-container": "#93000a",
+              "on-primary-fixed-variant": "#3a4951",
+              "inverse-on-surface": "#e3f3fd",
+              "outline-variant": "#c3c7ca",
+              "on-tertiary-fixed": "#002114",
+              "inverse-primary": "#b9c9d3",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#ffdcc3",
+              "on-secondary-fixed": "#2f1500",
+              "surface-bright": "#f4faff",
+              "tertiary-container": "#00452e",
+              "error": "#ba1a1a",
+              "on-surface": "#0e1d25",
+              "tertiary-fixed-dim": "#95d4b3",
+              "tertiary-fixed": "#b1f0ce",
+              "surface-container-low": "#e7f6ff",
+              "on-primary": "#ffffff",
+              "surface": "#f4faff",
+              "surface-container-highest": "#d5e5ef",
+              "background": "#f4faff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .blue-blueprint-overlay {
+        background: linear-gradient(135deg, rgba(25, 40, 48, 0.85) 0%, rgba(47, 62, 70, 0.4) 100%);
+      }
+      input:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 2px #FF8C00 !important;
+        border-color: transparent !important;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen flex items-stretch">
+<!-- Split Layout Container -->
+<main class="flex-1 flex flex-col md:flex-row min-h-screen">
+<!-- Left Column: Visual Anchor (Hidden on small mobile if needed, but here we keep split) -->
+<section class="hidden lg:flex lg:w-3/5 relative overflow-hidden bg-primary">
+<img alt="High-contrast architectural steel beams" class="absolute inset-0 w-full h-full object-cover" data-alt="Dramatically lit close-up of industrial steel I-beams and girders under construction with intense shadows and sharp geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfhmyYih68UcMEXWrLrbiBBKtgY0qOuKA_g0wWFDIZxXlxgkhMBb1mFk22gUNDxHu65Do_bvwlQ7JVnAxiVV4F7oP1PL5Xqa8nncsycxsoKb99NvcQ2XTi2K-T8VFCOKwsXKI3YPFjDWjCt1kY8khTI9xW9-Rt3eCSxhb7JMiEozvOig1Z3_nKnycHB5hDnC4NV7beqWEkFNL_8LQFnUo0uDf9eI8rg9xw7lBN0D01kh3MQFEhaD3cjZHYGZWd7Srn8wxWykqdJDc"/>
+<div class="absolute inset-0 blue-blueprint-overlay mix-blend-multiply"></div>
+<!-- Branding Overlay for Desktop -->
+<div class="relative z-10 p-16 flex flex-col justify-between h-full">
+<div>
+<span class="inline-block px-3 py-1 bg-secondary text-on-secondary text-xs font-bold uppercase tracking-[0.2em] mb-6">Field Ready</span>
+<h1 class="font-headline text-6xl font-bold text-white tracking-tighter leading-none max-w-md">BuildTrack</h1>
+</div>
+<div class="max-w-md">
+<p class="text-surface-variant font-medium text-lg leading-relaxed mb-8">
+                        The definitive authority for site compliance and industrial verification. Precisely engineered for the modern field engineer.
+                    </p>
+<div class="flex gap-12">
+<div>
+<span class="block text-2xl font-bold text-white font-headline">100%</span>
+<span class="text-on-primary-container text-xs uppercase tracking-widest font-bold">Accuracy</span>
+</div>
+<div>
+<span class="block text-2xl font-bold text-white font-headline">0%</span>
+<span class="text-on-primary-container text-xs uppercase tracking-widest font-bold">Paperwork</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Login Card Container -->
+<section class="flex-1 flex items-center justify-center p-6 md:p-12 lg:p-20 bg-surface">
+<div class="w-full max-w-md">
+<!-- Mobile Branding (Logo only) -->
+<div class="lg:hidden mb-12">
+<h2 class="font-headline text-3xl font-extrabold text-primary tracking-tighter">BuildTrack</h2>
+<div class="h-1 w-12 bg-secondary mt-2"></div>
+</div>
+<!-- Login Header -->
+<div class="mb-10">
+<h3 class="font-headline text-4xl font-bold text-primary mb-2">Access Portal</h3>
+<p class="text-on-surface-variant font-medium">Please authenticate to manage your site inspections.</p>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block text-sm font-bold uppercase tracking-widest text-on-surface-variant" for="email">Worker Email</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none h-14 px-4 text-primary font-medium transition-all" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
+<span class="absolute right-4 top-4 material-symbols-outlined text-outline-variant">alternate_email</span>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-sm font-bold uppercase tracking-widest text-on-surface-variant" for="password">Secure Token</label>
+<a class="text-xs font-bold text-secondary uppercase tracking-tighter hover:underline" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none h-14 px-4 text-primary font-medium transition-all" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<span class="absolute right-4 top-4 material-symbols-outlined text-outline-variant">lock</span>
+</div>
+</div>
+<!-- Options -->
+<div class="flex items-center">
+<input class="w-5 h-5 border-none bg-surface-container-highest rounded-sm text-secondary focus:ring-0" id="remember" name="remember" type="checkbox"/>
+<label class="ml-3 text-sm font-medium text-on-surface" for="remember">Keep me signed in on this station</label>
+</div>
+<!-- Primary Action -->
+<button class="w-full h-14 bg-secondary text-on-secondary font-bold text-lg uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-secondary-container transition-all active:scale-[0.98]" type="submit">
+                        LOGIN
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+<!-- SSO Divider -->
+<div class="relative my-10 flex items-center">
+<div class="flex-grow h-[1px] bg-surface-container-highest"></div>
+<span class="px-4 text-[10px] font-black uppercase tracking-[0.3em] text-outline-variant bg-surface">Enterprise Protocol</span>
+<div class="flex-grow h-[1px] bg-surface-container-highest"></div>
+</div>
+<!-- SSO Action -->
+<button class="w-full h-14 border-2 border-primary text-primary font-bold text-sm uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-primary hover:text-white transition-all" type="button">
+<span class="material-symbols-outlined" data-weight="fill">shield_person</span>
+                    Single Sign-On (SSO)
+                </button>
+<!-- Footer Support -->
+<p class="mt-12 text-center text-xs text-on-surface-variant font-medium">
+                    Technical difficulties? <a class="text-primary font-bold underline underline-offset-4" href="#">Contact Site Support</a>
+</p>
+</div>
+</section>
+</main>
+<!-- Blueprint Grid Background Decoration (Subtle texture on the login side) -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[-1]" style="background-image: radial-gradient(#192830 0.5px, transparent 0.5px); background-size: 24px 24px;">
+</div>
+</body></html>
